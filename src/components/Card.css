@@ -1,0 +1,9 @@
+.card {
+    width: 250px;
+    display: inline-block;
+}
+
+.robot {
+    height: 200px;
+    width: 200px;
+}
