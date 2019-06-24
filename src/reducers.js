@@ -5,11 +5,11 @@ import {
     REQUEST_ROBOTS_FAILED
    } from "./constants.js";
 
-   const intialStateSearch = {
+   const initialStateSearch = {
     searchField: ''
 }
 
-export const searchRobots = (state=intialStateSearch, action={}) => {
+export const searchRobots = (state=initialStateSearch, action={}) => {
     switch(action.type) {
         case CHANGE_SEARCH_FIELD:
             return Object.assign({}, state, { searchField: action.payload })
@@ -18,13 +18,13 @@ export const searchRobots = (state=intialStateSearch, action={}) => {
     }
 }
 
-const intialStateRobots = {
+const initialStateRobots = {
     isPending: false,
     robots: [],
     error: ''
 }
 
-export const requestRobots = (state=intialStateRobots, action={}) => {
+export const requestRobots = (state=initialStateRobots, action={}) => {
     switch(action.type) {
         case REQUEST_ROBOTS_PENDING:
             return Object.assign({}, state, { isPending: true })
